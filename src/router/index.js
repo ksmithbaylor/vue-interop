@@ -4,6 +4,7 @@ import { VuePlugin as ReactInVue } from 'vuera';
 import Home from '@/components/Home';
 import VueComponent from '@/components/VueComponent';
 import ReactComponent from '@/components/ReactComponent';
+import ElmComponent from '@/components/ElmComponent';
 
 Vue.use(Router);
 Vue.use(ReactInVue);
@@ -25,6 +26,11 @@ export default new Router({
       path: '/react',
       name: 'ReactComponent',
       component: ReactComponent,
+    },
+    {
+      path: '/elm',
+      name: 'ElmComponent',
+      component: ElmComponent,
     },
   ],
 });
