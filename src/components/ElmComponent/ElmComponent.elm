@@ -3,20 +3,20 @@ module Main exposing (..)
 import Html exposing (Html, text, p, div)
 
 
-type alias Flags =
+type alias Props =
     { stuff : String
     }
 
 
 type alias Model =
-    Flags
+    Props
 
 
-type Msg
+type Action
     = NoOp
 
 
-main : Program Flags Model Msg
+main : Program Props Model Action
 main =
     Html.programWithFlags
         { init = init
@@ -26,17 +26,17 @@ main =
         }
 
 
-init : Flags -> ( Model, Cmd Msg )
-init flags =
-    ( flags, Cmd.none )
+init : Props -> ( Model, Cmd Action )
+init props =
+    ( props, Cmd.none )
 
 
-update : Msg -> Model -> ( Model, Cmd Msg )
-update msg model =
+update : Action -> Model -> ( Model, Cmd Action )
+update action model =
     ( model, Cmd.none )
 
 
-view : Model -> Html Msg
+view : Model -> Html Action
 view model =
     div []
         [ p [] [ text "This was rendered with Elm!" ]
