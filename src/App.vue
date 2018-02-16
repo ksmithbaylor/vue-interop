@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <router-link to="/"><img src="./assets/logo.png"></router-link>
     <ul>
+      <li><router-link to="/">Home</router-link></li>
       <li v-for="technology in technologies" :key="technology">
         <router-link :to="linkFor(technology)">
           {{ technology }}
