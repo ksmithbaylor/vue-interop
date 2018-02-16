@@ -1,4 +1,4 @@
-# trying-out-vue_todo
+# Vue Interop
 
 > A Vue.js project
 
