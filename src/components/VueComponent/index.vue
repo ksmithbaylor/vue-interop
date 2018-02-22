@@ -1,13 +1,10 @@
 <template>
-  <div>
-    <p>This was rendered with Vue!</p>
-    <p>{{ stuff }}</p>
-    <p>{{ arr }}</p>
-    <p>{{ obj }}</p>
-  </div>
+  <vue-component :stuff="stuff" :arr="arr" :obj="obj"></vue-component>
 </template>
 
 <script>
+import VueComponent from './VueComponent';
+
 export default {
   name: 'VueComponent',
   data() {
@@ -20,6 +17,9 @@ export default {
         },
       },
     };
+  },
+  components: {
+    'vue-component': VueComponent,
   },
 };
 </script>
