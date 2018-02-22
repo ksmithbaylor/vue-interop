@@ -1,5 +1,5 @@
 <template>
-  <elm-component :flags="flags"></elm-component>
+  <elm-component :stuff="stuff" :arr="arr" :obj="obj"></elm-component>
 </template>
 
 <script>
@@ -10,8 +10,12 @@ export default {
   name: 'ElmComponent',
   data() {
     return {
-      flags: {
-        stuff: 'Here is some data from the Vue instance.',
+      stuff: 'Here is some data from the Vue instance.',
+      arr: [1, 2, 3],
+      obj: {
+        foo: {
+          bar: 42,
+        },
       },
     };
   },

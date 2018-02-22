@@ -17,6 +17,7 @@
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "elm": "^0.18.0",
     "elm-webpack-loader": "^4.4.0",
+    "lodash": "^4.17.5",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "vue": "^2.5.2",

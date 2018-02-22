@@ -1,25 +1,17 @@
+import cloneDeep from 'lodash/cloneDeep';
+
 export default function (elm) {
   return {
-    props: {
-      ports: {
-        type: Function,
-        required: false,
-      },
-      flags: {
-        type: Object,
-        required: false,
-      },
-    },
-    render(createElement) {
-      return createElement('div');
-    },
     mounted() {
-      const node = this.$el;
-      const app = elm.embed(node, this.$props.flags);
+      const { ports, ...flags } = cloneDeep(this.$attrs);
+      const app = elm.embed(this.$el, flags);
 
-      if (this.$props.ports) {
-        this.$props.ports(app.ports);
+      if (ports) {
+        ports(app.ports);
       }
+    },
+    render(h) {
+      return h('div');
     },
   };
 }

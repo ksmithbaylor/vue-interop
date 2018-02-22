@@ -5,6 +5,12 @@ import Html exposing (Html, text, p, div)
 
 type alias Props =
     { stuff : String
+    , arr : List Int
+    , obj :
+        { foo :
+            { bar : Int
+            }
+        }
     }
 
 
@@ -41,4 +47,6 @@ view model =
     div []
         [ p [] [ text "This was rendered with Elm!" ]
         , p [] [ text model.stuff ]
+        , p [] [ text <| toString model.arr ]
+        , p [] [ text <| toString model.obj ]
         ]
