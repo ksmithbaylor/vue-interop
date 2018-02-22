@@ -1,5 +1,5 @@
 <template>
-  <react-component :stuff="stuff"></react-component>
+  <react-component :stuff="stuff" :arr="arr" :obj="obj"></react-component>
 </template>
 
 <script>
@@ -10,6 +10,12 @@ export default {
   data() {
     return {
       stuff: 'Here is some data from the Vue instance.',
+      arr: [1, 2, 3],
+      obj: {
+        foo: {
+          bar: 42,
+        },
+      },
     };
   },
   components: {
